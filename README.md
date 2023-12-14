@@ -1,4 +1,4 @@
-# React Native App - Travel App UI
+# React Native App - Movie App UI
 
 This repo is a react native app that using Expo, NativeWind / Tailwind CSS (3.3.2), and React Navigation.
 
