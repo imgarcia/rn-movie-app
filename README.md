@@ -2,8 +2,11 @@
 
 This repo is a react native app that using Expo, NativeWind / Tailwind CSS (3.3.2), and React Navigation.
 
-YouTube Link - https://www.youtube.com/watch?v=Q1xQuCpYIFE
-Tutorial Repo - https://github.com/syednomishah/Movie-App-React-Native
+## Useful Links
+- YouTube Link - https://www.youtube.com/watch?v=Q1xQuCpYIFE
+- Tutorial Repo - https://github.com/syednomishah/Movie-App-React-Native
+- NativeWind / TailwindCSS / Expo Setup - https://www.nativewind.dev/quick-starts/expo
+- TailwindCSS Docs - https://tailwindcss.com/docs/installation
 
 ## Project Setup
 1. Make sure expo cli is installed and run `expo init`
