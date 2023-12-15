@@ -12,12 +12,14 @@ import {
 import React, { useState } from 'react'
 import { XMarkIcon } from 'react-native-heroicons/outline'
 import { useNavigation } from '@react-navigation/native'
+import { Loading } from '../components/loading'
 
 var { width, height } = Dimensions.get('window')
 
 export const SearchScreen = () => {
   const navigation = useNavigation()
   const [results, setResults] = useState([1, 2, 3, 4])
+  const [loading, setLoading] = useState(false)
 
   let movieName = 'Ant-Man and the Wasp: Quantumania'
 
@@ -38,7 +40,10 @@ export const SearchScreen = () => {
       </View>
 
       {/* results */}
-      {results.length > 0 ? (
+
+      {loading ? (
+        <Loading />
+      ) : results.length > 0 ? (
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{ paddingHorizontal: 15 }}
