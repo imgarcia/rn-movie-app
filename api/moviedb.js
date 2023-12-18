@@ -33,6 +33,9 @@ const personDetailsEndpoint = (id) =>
 const personMoviesEndpoint = (id) =>
   `${apiBaseUrl}/person/${id}/movie_credits?language=en-US`
 
+const searchMoviesEndpoint = (name) =>
+  `${apiBaseUrl}/search/movie?query=${name}&include_adult=false&language=en-US`
+
 const apiCall = async (endpoint, params) => {
   const options = {
     headers: {
@@ -76,3 +79,13 @@ export const fetchSimilarMovies = ({ id }) => apiCall(similarMoviesEndpoint(id))
 // person details api
 export const fetchPersonDetails = ({ id }) => apiCall(personDetailsEndpoint(id))
 export const fetchPersonMovies = ({ id }) => apiCall(personMoviesEndpoint(id))
+
+// search api
+// export const searchMovies = ({ params }) => {
+//   console.log('params is: ', params)
+//   apiCall(searchMoviesEndpoint, params)
+// }
+
+export const searchMovies = (name) =>
+  // console.log('params is: ', params)
+  apiCall(searchMoviesEndpoint(name))
