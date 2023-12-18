@@ -96,7 +96,6 @@ export const PersonScreen = () => {
           >
             <View className="items-center rounded-full overflow-hidden h-72 w-72 border-neutral-500 border-2">
               <Image
-                // source={require('../../assets/images/castImage2.png')}
                 source={{
                   uri: image342(person?.profile_path || fallbackPersonImage),
                 }}
@@ -147,7 +146,7 @@ export const PersonScreen = () => {
           <View className="my-6 mx-4 space-y-2">
             <Text className="text-white text-lg">Biography</Text>
             <Text className="text-neutral-400 tracking-wide">
-              {person?.biography} || 'N/A'
+              {person?.biography || 'N/A'}
             </Text>
           </View>
 
