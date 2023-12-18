@@ -39,7 +39,7 @@ export const PersonScreen = () => {
     setLoading(true)
     getPersonDetails(item.id)
     getPersonMovies(item.id)
-  }, [])
+  }, [item.id])
 
   const getPersonDetails = async (id) => {
     const data = await fetchPersonDetails({ id })

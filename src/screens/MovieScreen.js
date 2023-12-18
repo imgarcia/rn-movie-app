@@ -152,16 +152,16 @@ export const MovieScreen = () => {
           </View>
 
           {/** movie cast members */}
-          {movie?.id && cast.length > 0 && (
-            <Cast navigation={navigation} cast={cast} />
-          )}
+          {cast.length > 0 && <Cast navigation={navigation} cast={cast} />}
 
           {/* similar movies */}
-          <MovieList
-            title="Similar Movies"
-            data={similarMovies}
-            hideSeeAll={true}
-          />
+          {similarMovies.length > 0 && (
+            <MovieList
+              title="Similar Movies"
+              data={similarMovies}
+              hideSeeAll={true}
+            />
+          )}
         </View>
       )}
     </ScrollView>
