@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { apiKey } from '../src/constants'
+import { API_KEY } from '@env'
 
 // images uri
 export const image500 = (path) =>
@@ -33,8 +33,7 @@ const apiCall = async (endpoint, params) => {
   const options = {
     headers: {
       accept: 'application/json',
-      Authorization:
-        'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNTgyZWUzNWNkZDZjMDc3MDEzMjJkNWMwMGNmOWY5YyIsInN1YiI6IjY1N2NhODAxN2VjZDI4MDBhZDI0YTM0MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.HA0pkHXlLhBITclu85MwoVagc_daesyz6JRS1xxsTzE',
+      Authorization: `Bearer ${process.env.API_KEY}`,
     },
     method: 'GET',
     url: endpoint,

@@ -117,7 +117,7 @@ export const MovieScreen = () => {
           <View style={{ marginTop: -(height * 0.09) }} className="space-y-3">
             {/** movie title */}
             <Text className="text-white text-center text-3xl font-bold tracking-wide">
-              {movie?.title}
+              {movie?.title} SIMON
             </Text>
 
             {/** movie status, release and runtime */}
