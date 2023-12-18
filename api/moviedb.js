@@ -23,17 +23,21 @@ const topRatedMoviesEndpoint = `${apiBaseUrl}/movie/top_rated?language=en-US`
 
 // dynamic endpoints
 const movieDetailsEndpoint = (id) => `${apiBaseUrl}/movie/${id}?language=en-US`
-
 const movieCreditsEndpoint = (id) =>
   `${apiBaseUrl}/movie/${id}/credits?language=en-US`
 const similarMoviesEndpoint = (id) =>
   `${apiBaseUrl}/movie/${id}/similar?language=en-US`
 
+const personDetailsEndpoint = (id) =>
+  `${apiBaseUrl}/person/${id}?language=en-US`
+const personMoviesEndpoint = (id) =>
+  `${apiBaseUrl}/person/${id}/movie_credits?language=en-US`
+
 const apiCall = async (endpoint, params) => {
   const options = {
     headers: {
       accept: 'application/json',
-      Authorization: `Bearer ${process.env.API_KEY}`,
+      Authorization: `Bearer ${API_KEY}`,
     },
     method: 'GET',
     url: endpoint,
@@ -68,3 +72,7 @@ export const fetchMovieDetails = ({ id }) => apiCall(movieDetailsEndpoint(id))
 export const fetchMovieCredits = ({ id }) => apiCall(movieCreditsEndpoint(id))
 
 export const fetchSimilarMovies = ({ id }) => apiCall(similarMoviesEndpoint(id))
+
+// person details api
+export const fetchPersonDetails = ({ id }) => apiCall(personDetailsEndpoint(id))
+export const fetchPersonMovies = ({ id }) => apiCall(personMoviesEndpoint(id))
